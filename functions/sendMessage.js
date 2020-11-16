@@ -1,3 +1,5 @@
+import RAPIDAPI_KEY from "env";
+
 const axios = require('axios')
 
 const headers = {
@@ -15,7 +17,7 @@ export async function handler(event, context) {
   try {
     const response = await axios({
         "method":"POST",
-        "url":"https://maytapi-whatsapp.p.rapidapi.com/PHONE_ID/sendMessage",
+        "url":"https://maytapi-whatsapp.p.rapidapi.com/9867/sendMessage",
         "headers": headers,
         "data":{
             "to_number": `+${countryCallingCode}${phone}`,
